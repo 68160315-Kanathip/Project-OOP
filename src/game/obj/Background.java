@@ -115,7 +115,7 @@ public class Background {
     }
 
     private void initStars() {
-        // สร้างดาว 150 ดวง
+        // สร้างดาว
         for (int i = 0; i < 50; i++) {
             float x = random.nextInt(width);
             float y = random.nextInt(height);
@@ -127,7 +127,7 @@ public class Background {
     }
 
     private void initShootingStars() {
-        // สร้างดาวตก 3 ดวง
+        // สร้างดาวตก
         for (int i = 0; i < 5; i++) {
             shootingStars.add(new ShootingStar());
         }
@@ -170,7 +170,7 @@ public class Background {
         // สร้างพื้นหลังไล่สีจากเข้มไปสว่าง
         for (int i = 0; i < height; i++) {
             float ratio = (float) i / height;
-            // สีน้ำเงินเข้มไปจนถึงม่วง
+            // สีดำไปม่วงเข้ม
             int r = (int) (0 + 5 * ratio);
             int gr = (int) (0 + 0 * ratio);
             int b = (int) (0 + 5 * ratio);
