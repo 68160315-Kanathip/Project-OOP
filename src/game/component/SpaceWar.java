@@ -592,15 +592,14 @@ public class SpaceWar extends JComponent {
         g2.setFont(getFont().deriveFont(Font.BOLD, 15f));
         g2.drawString("Score : " + score, 10, 20);
 
-        // Draw health bar - using getHP() only, assuming max HP is 100 or we calculate percentage
+        //สร้างหลิดเลือด
         if (player != null) {
             g2.setColor(Color.RED);
             g2.fillRect(10, 30, 200, 20);
             g2.setColor(Color.GREEN);
 
-            // Calculate health percentage
-            // Assuming player has HP between 0-100 or we can use a different approach
-            double healthPercent = player.getHP() / 100.0; // Adjust this based on your Player class
+            //คำนวนหลอดเลือดเป็น%
+            double healthPercent = player.getHP() / 100.0; 
             if (healthPercent < 0) healthPercent = 0;
             if (healthPercent > 1) healthPercent = 1;
 
@@ -609,7 +608,7 @@ public class SpaceWar extends JComponent {
             g2.setColor(Color.WHITE);
             g2.drawRect(10, 30, 200, 20);
 
-            // Add health text
+            //เพิ่มแสดง%ที่หลอดเลือด
             g2.setFont(getFont().deriveFont(Font.BOLD, 12f));
             String healthText = (int)(healthPercent * 100) + "%";
             FontMetrics fm = g2.getFontMetrics();
@@ -617,7 +616,7 @@ public class SpaceWar extends JComponent {
             g2.drawString(healthText, textX, 45);
         }
     }
-
+    //กด esc แสดงหน้าหยุดเกม
     private void drawPaused() {
         g2.setColor(new Color(0, 0, 0, 150));
         g2.fillRect(0, 0, width, height);
@@ -635,7 +634,7 @@ public class SpaceWar extends JComponent {
         int resumeX = (width - fm.stringWidth(resumeMsg)) / 2;
         g2.drawString(resumeMsg, resumeX, height / 2 + 50);
     }
-
+    //เลือดผู้เล่นเหลือ0แสดงจบเกม
     private void drawGameOver() {
         g2.setColor(new Color(0, 0, 0, 180));
         g2.fillRect(0, 0, width, height);
