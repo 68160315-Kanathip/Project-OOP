@@ -130,7 +130,7 @@ public class SpaceWar extends JComponent {
                         drawMenu();
                         break;
                 }
-
+                
                 render();
 
                 long time = System.nanoTime() - startTime;
