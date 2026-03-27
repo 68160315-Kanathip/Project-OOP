@@ -140,6 +140,7 @@ public class SpaceWar extends JComponent {
                 }
             }
         });
+        
         gameThread.start();
     }
 
