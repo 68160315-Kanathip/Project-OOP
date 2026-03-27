@@ -11,7 +11,7 @@ import javax.swing.ImageIcon;
 public class Player extends HpRender {
 
     public Player() {
-        super(new HP(120, 120));
+        super(new HP(100, 100));
         this.image = new ImageIcon(getClass().getResource("/game/image/plane.png")).getImage();
         this.image_speed = new ImageIcon(getClass().getResource("/game/image/plane_speed.png")).getImage();
         Path2D p = new Path2D.Double();
