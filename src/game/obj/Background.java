@@ -22,7 +22,7 @@ public class Background {
         int size;
         int alpha;
         float speed;
-
+        
         Star(float x, float y, int size, int alpha, float speed) {
             this.x = x;
             this.y = y;
